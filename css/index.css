@@ -1,0 +1,367 @@
+/* 清除点击高亮 */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+/* 在ios上清除默认样式才是给按钮和输入框自定义样式 */
+input {
+    -webkit-appearance: none;
+}
+/* 禁止长按页面时弹出菜单 */
+img,
+a {
+    -webkit-touch-callout: none;
+}
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #666;
+    background-color: #f6f6f6;
+}
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+/* 顶部 */
+.app {
+    height: 45px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+/* 去除图片底部空隙 */
+img {
+    vertical-align: middle;
+}
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color:#333333 ;  
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+.app ul li:nth-child(1) img{
+    width: 10px;
+}
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+.app ul li:nth-child(2) img{
+    width: 30px;
+    /* 为了居中 改成中线对齐 默认图片与文字基线对齐 */
+    vertical-align: middle;
+}
+.app ul li:nth-child(3) {
+    width: 57%;  
+}
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+/* 顶部 End*/
+/* 搜索栏 */
+.search-wrap {
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 640px;
+}
+.search_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: aqua; */
+    width: 40px;
+    height: 44px;
+}
+.search_btn::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+.search_login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: aqua; */
+    width: 40px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+}
+.search {
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 7px 50px 0;
+    border-radius: 15px;   
+}
+.jd_icon {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    top: 8px;
+    left: 13px;
+    /* background-color: aqua; */
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+.jd_icon::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 15px;
+    right: -8px;
+    top: 0;
+    background-color: #ccc;
+}
+.sou {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    /* background-color: aqua; */
+
+    /* 二倍精灵图做法 ps里把整体图像缩小一倍再测量 然后这里背景图像大小也同样缩小一倍 */
+    background: url(../images/jd-sprites.png) no-repeat -83px 0px;
+    background-size: 200px auto;
+}
+/* 搜索栏 End*/
+
+/* 主体内容部分 */
+.slider img{
+    width: 100%;
+}
+/* 品牌日 */
+.brand {
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+.brand div img {
+    width: 100%;
+}
+/* nav  */
+nav {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    
+}
+nav a img {
+    width: 40px;
+    margin: 10px 0;
+}
+nav a span {
+    display: block;
+}
+/* 新闻 */
+.news {
+    margin-top: 20px;
+}
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+.news a:nth-child(1){
+    width: 50%;
+}
+.news a:nth-child(n+2){
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+.news a img {
+    width: 100%;
+}
+/* 主体内容部分 End*/
+
+/* 楼层部分 */
+.floor
+.floor_title {
+    margin-top: 5px;
+}
+.floor_title img {
+    width: 100%;
+} 
+.floor_container {
+    margin: 0 10px;
+}
+.floor_container ul li {
+    float: left;
+    box-sizing: border-box;
+}
+
+.floor_container ul li:nth-child(1),
+.floor_container ul li:nth-child(3),
+.floor_container ul li:nth-child(4),
+.floor_container ul li:nth-child(5){
+    border-right: 1px solid #f5f5f5;
+}
+.floor_container ul li:nth-child(1),
+.floor_container ul li:nth-child(2) {
+    border-bottom: 1px solid #f5f5f5;
+}
+.floor_container ul li:nth-child(-n+2) {
+    width: 50%;  
+}
+.floor_container ul li:nth-child(n+3) {
+    width: 25%;
+}
+.floor_container ul li a {
+    display: block;
+}
+.floor_container ul li a img {
+    width: 100%;
+}
+/* 推荐 */
+.tuijian {
+    margin-top: 20px;
+}
+.tuijian_content ul li {
+    width: 50%;
+    margin-bottom: 5px;
+}
+.tuijian_content ul li:nth-child(2n) {
+    /* border-left: 5px solid transparent; */
+    padding-left: 3px;
+}
+.tuijian_content ul li a {
+    background-color: #fff;
+}
+.tuijian_content ul li a img {
+    height: 176px;
+}
+.product_text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 13px;
+    line-height: 16px;
+    height: 31px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    padding: 0 5px;
+    padding-top: 10px;
+}
+.tuijian_content ul li a .product_text img {
+    display: inline-block; 
+    width: auto;
+    height: 13px;
+    margin-right: 5px;
+}
+.price {
+    position: relative;
+    color: #f23030;
+    line-height: 24px;
+   
+    padding: 10px 5px 26px 5px;
+    background-color: #fff;
+}
+.price .big_price {
+    font-size: 16px;
+}
+.price a {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    float: right;
+    font-size: 13px;
+    width: 49px;
+    height: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* 楼层部分 End*/
+
+/* 底部 */
+.footer {
+    background-color: #fff;
+}
+.links {
+    border-bottom: 1px solid #ccc;
+}
+.links ul {
+    padding: 16px 20px;
+}
+.links ul li {
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.links ul li:nth-child(-n+3)::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: #ccc;
+    top: 4px;
+    right: 0;
+}
+.links ul li a {
+    color: #848689;
+}
+.version {
+    border-bottom: 1px solid #ccc;
+}
+.version ul {
+    padding: 4px 7.5px;
+}
+.version ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+.version ul li img {
+    width: 60px;
+    height: 60px;
+}
+.copyrights {
+    padding: 5px 0;
+    font-size: 9px;
+    color: #848689;
+    text-align: center;
+}
+/* 底部 End*/
